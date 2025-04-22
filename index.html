@@ -1,0 +1,359 @@
+/* Estilos base (para pantallas más grandes) */
+        :root {
+            --primary-color: #ff4d4d;
+            --secondary-color: #4dd0e1;
+            --background-dark: #0e1b2c;
+            --background-dark-secondary: #08111d;
+            --text-light: #e0e0e0;
+            --text-medium: #ccc;
+            --spacing-small: 0.5rem;
+            --spacing-medium: 1rem;
+            --spacing-large: 1.5rem;
+            --border-radius-small: 5px;
+            --border-radius-medium: 8px;
+            --font-size-small: 0.9rem;
+            --font-size-regular: 1rem;
+            --font-size-large: 1.1rem;
+            --font-size-h2: 2.2rem;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--background-dark-secondary);
+            padding: var(--spacing-large) 0;
+            text-align: center;
+            display: flex; /* Para alinear logo y título en pantallas más grandes */
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header img {
+            width: 100px; /* Logo más pequeño en móvil */
+            margin-right: var(--spacing-medium);
+            margin-bottom: 0; /* Eliminar margen inferior en diseño horizontal */
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2rem; /* Título ligeramente más pequeño en móvil */
+        }
+
+        nav {
+            text-align: center;
+            margin-top: var(--spacing-large);
+            background-color: #152841;
+            padding: var(--spacing-small) 0;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: var(--spacing-small) var(--spacing-medium);
+            border-radius: var(--border-radius-small);
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin: 0 var(--spacing-small);
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+
+        section {
+            padding: 2rem; /* Reducir el padding general en móvil */
+            text-align: center;
+        }
+
+        section h2 {
+            color: var(--secondary-color);
+            font-size: 1.8rem; /* Títulos de sección más pequeños en móvil */
+            margin-bottom: var(--spacing-medium);
+        }
+
+        #nosotros p {
+            font-size: var(--font-size-regular); /* Texto de "Sobre Nosotros" más pequeño */
+            margin-bottom: 1.5rem;
+            color: var(--text-medium);
+        }
+
+        #nosotros strong {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .ventajas-title {
+            font-size: 1.4rem; /* Título de ventajas más pequeño */
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: var(--spacing-small);
+        }
+
+        ul.ventajas {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Apilar verticalmente por defecto en móvil */
+            align-items: center; /* Centrar los elementos */
+            gap: var(--spacing-small);
+        }
+
+        ul.ventajas li {
+            font-size: var(--font-size-regular);
+            display: flex;
+            align-items: center;
+            background-color: #152841;
+            padding: var(--spacing-medium);
+            border-radius: var(--border-radius-medium);
+            width: 90%; /* Ocupar más ancho en móvil */
+            text-align: left; /* Alinear el texto a la izquierda para mejor lectura */
+        }
+
+        ul.ventajas li i {
+            color: var(--secondary-color);
+            margin-right: var(--spacing-medium);
+            font-size: 1.2rem;
+        }
+
+        .catalogo {
+            text-align: center;
+        }
+
+        .galeria {
+            display: flex;
+            flex-direction: row; /* Mostrar en fila */
+            flex-wrap: wrap; /* Permitir envolver */
+            gap: var(--spacing-small);
+            justify-content: center;
+            margin-top: var(--spacing-medium);
+        }
+
+        .galeria img {
+            width: calc(50% - var(--spacing-small)); /* Dos imágenes por fila en la mayoría de los móviles */
+            max-width: none; /* Eliminar max-width para el cálculo correcto */
+            height: auto; /* Ajustar altura proporcionalmente */
+            object-fit: cover;
+            border: 2px solid var(--secondary-color); /* Borde más delgado en móvil */
+            border-radius: 8px; /* Bordes más pequeños en móvil */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.02); /* Efecto hover más sutil en móvil */
+        }
+
+        .redes {
+            text-align: center;
+        }
+
+        .redes h2 {
+            margin-bottom: var(--spacing-medium);
+        }
+
+        .redes a {
+            margin: 0 var(--spacing-small);
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.5rem; /* Iconos más pequeños en móvil */
+            transition: color 0.3s ease;
+        }
+
+        .redes a:hover {
+            color: var(--secondary-color);
+        }
+
+        .redes i {
+            margin-right: var(--spacing-small);
+        }
+
+        .precios table {
+            margin: 1.5rem auto; /* Reducir márgenes en móvil */
+            border-collapse: collapse;
+            width: 95%; /* Ocupar más ancho en móvil */
+            border-radius: var(--border-radius-small);
+            overflow: hidden;
+            font-size: var(--font-size-small); /* Fuente más pequeña en la tabla */
+        }
+
+        .precios th, .precios td {
+            border: 1px solid var(--secondary-color);
+            padding: var(--spacing-small);
+            text-align: center;
+        }
+
+        .precios th {
+            background-color: #152841;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .precios tr:nth-child(even) {
+            background-color: #1e3b5f;
+        }
+
+        .contacto {
+            text-align: center;
+        }
+
+        .contacto h2 {
+            margin-bottom: var(--spacing-medium);
+        }
+
+        .contacto a {
+            color: var(--text-light);
+            background-color: var(--primary-color);
+            padding: 1rem 2rem; /* Botón de contacto más pequeño */
+            text-decoration: none;
+            border-radius: var(--border-radius-medium);
+            font-size: var(--font-size-regular); /* Fuente más pequeña en el botón */
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .contacto a:hover {
+            background-color: #d63031;
+        }
+
+        footer {
+            text-align: center;
+            padding: var(--spacing-medium) 0; /* Reducir padding del footer */
+            background-color: var(--background-dark-secondary);
+            color: #888;
+            font-size: var(--font-size-small);
+            margin-top: 2rem; /* Reducir margen superior del footer */
+        }
+
+        /* Media query para pantallas más grandes (revertir algunos estilos) */
+        @media screen and (min-width: 769px) {
+            header {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            header img {
+                width: 150px;
+                margin-right: var(--spacing-medium);
+                margin-bottom: 0;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 0 var(--spacing-small);
+            }
+
+            ul.ventajas {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            ul.ventajas li {
+                width: fit-content;
+                text-align: left;
+            }
+
+            .galeria {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .galeria img {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/logo.jpeg" alt="Logo de Virtual-Shop PY">
+        <h1>Virtual-Shop PY</h1>
+    </header>
+
+    <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#precios">Precios</a>
+        <a href="#redes">Redes Sociales</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En <strong>Virtual-Shop PY</strong>, somos más que una tienda online de camisetas para hombres: somos una comunidad apasionada por el estilo, la comodidad y la autenticidad. Nuestro compromiso va más allá de vender ropa, buscamos brindarte una experiencia de compra cercana, amigable y totalmente confiable. Estamos en Asunción, pero llegamos a vos estés donde estés.</p>
+        <div class="ventajas-title">Ventajas de comprar con nosotros</div>
+        <ul class="ventajas">
+            <li><i class="fas fa-tshirt"></i>Diseños exclusivos y varoniles</li>
+            <li><i class="fas fa-dollar-sign"></i>Precios competitivos</li>
+            <li><i class="fas fa-shipping-fast"></i>Envíos rápidos y seguros</li>
+            <li><i class="fas fa-user-check"></i>Atención personalizada</li>
+        </ul>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+        <h2>Catálogo</h2>
+        <div class="galeria">
+            <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo1.jpg" alt="Camiseta 1">
+            <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo2.jpg" alt="Camiseta 2">
+            <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo3.jpg" alt="Camiseta 3">
+            <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo4.jpg" alt="Camiseta 4">
+            <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo5.jpg" alt="Camiseta 5">
+            <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo6.jpg" alt="Camiseta 6">
+        </div>
+    </section>
+
+    <section id="precios" class="precios">
+        <h2>Precios</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Camiseta Clásica</td>
+                <td>Gs. 45.000</td>
+            </tr>
+            <tr>
+                <td>Camiseta Estampada</td>
+                <td>Gs. 55.000</td>
+            </tr>
+            <tr>
+                <td>Camiseta Premium</td>
+                <td>Gs. 65.000</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="redes" class="redes">
+        <h2>Seguinos en nuestras redes</h2>
+        <a href="https://www.instagram.com/virtualshopp_py" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i>Instagram</a>
+        <a href="https://www.facebook.com/share/1EFkKg4MGk" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i>Facebook</a>
+        <a href="https://www.tiktok.com/@virtualshopppy" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i>TikTok</a>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>¡Contactanos!</h2>
+        <a href="https://wa.me/595981331242" target="_blank" rel="noopener noreferrer">Enviar mensaje por WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Virtual-Shop PY - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
